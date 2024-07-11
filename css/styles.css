@@ -2,6 +2,7 @@
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
     --navy-blue: #2e2f42;
+    --navy-blue-rgb: 46 47 66;
     --white: #FFFFFF;
     --iris: #4d5ae5;
     --slate: #434455;
@@ -9,6 +10,7 @@
     --cloud: #F4F4FD;
     --ocean: #404bbf;
     --green: #31D0AA;
+    --diary: 252 252 252;
     --cornflower: #e7e9fc;
     --grey: rgba(46, 47, 66, 0.7);
     --row-indent: 48px;
@@ -494,4 +496,82 @@ footer {
 .footer-social .social-item-link:focus {
     background-color: var(--green);
 }
+/* #endregion */
+
+/* #region modal */
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--navy-blue-rgb)/ 45%);
+    backdrop-filter: blur(2px);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(var(--diary));
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    max-width: 408px;
+    min-height: 600px;
+    padding: 24px;
+}
+.modal-btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: var(--cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 8px;
+}
+.modal-btn-close-wrapper {
+    
+    
+}
+
+.modal-close-icon {
+    fill: black;
+}
+.modal-title {
+    margin-top: 24px;
+}
+.modal-form {
+}
+.modal-close-icon {
+}
+.modal-form-field {
+}
+.modal-form-agreement {
+}
+.btn {
+}
+.modal-form-lable {
+}
+.modal-input-wrapper {
+}
+.modal-form-comment {
+}
+.modal-form-description {
+}
+.modal-form-input {
+}
+.modal-form-icon {
+}
+.modal-form-checkbox {
+}
+.modal-form-link {
+}
+.modal-form-checkbox-icon {
+}
+
+
 /* #endregion */
