@@ -610,10 +610,11 @@ footer {
     padding: 0;
     width: 24px;
     height: 24px;
-    transition: var(--anim-fast);
-    transition-property: background-color,border;
+    transition: background-color var(--anim-fast) border var(--anim-fast);
 }
 
+
+/*     --ocean: #404bbf; */
 .modal-btn-close:hover {
     background-color: var(--ocean);
     border: none;
@@ -674,8 +675,7 @@ footer {
     width: 100%;
     height: 40px;
     outline: transparent;
-    transition: var(--anim-fast);
-    transition-property: border-color;
+    transition: border-color var(--anim-fast);
     background-color: transparent; 
 }
 .modal-form-input:focus {
@@ -688,8 +688,7 @@ footer {
     transform: translateY(-50%);
     fill: var(--navy-blue);
     stroke: none;
-    transition: var(--anim-fast);
-    transition-property: fill;
+    transition: fill var(--anim-fast);
 }
 .modal-form-input:focus + .modal-form-icon {
     fill: #4D5AE5;
@@ -713,8 +712,7 @@ footer {
     outline: transparent;
     resize: none;
     padding: 8px 16px;
-    transition: var(--anim-fast);
-    transition-property:  border-color;
+    transition: border-color var(--anim-fast);
 }
 
 
@@ -746,8 +744,7 @@ footer {
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
-    transition: var(--anim-fast);
-    transition-property: background-color,border,fill;
+    transition: background-color var(--anim-fast), border var(--anim-fast), fill var(--anim-fast);
     fill: transparent; 
 }
 .modal-form-link {
