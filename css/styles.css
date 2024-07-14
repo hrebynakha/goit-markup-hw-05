@@ -614,8 +614,10 @@ footer {
     transition-property: background-color,border;
 }
 
-
-.modal-btn-close:hover,
+.modal-btn-close:hover {
+    background-color: #404bbf;
+    border: none;
+}
 .modal-btn-close:focus {
     background-color: var(--ocean);
     border: none;
@@ -627,7 +629,9 @@ footer {
     transition-property: fill;
 }
 
-.modal-btn-close:hover .modal-close-icon,
+.modal-btn-close:hover .modal-close-icon {
+    fill: #ffffff;
+}
 .modal-btn-close:focus .modal-close-icon {
     fill: var(--white);
 }
@@ -647,7 +651,8 @@ footer {
     margin-bottom: 8px;
 }
 
-.modal-form-lable {
+
+.modal-form-label {
     display: block;
     margin-bottom: 4px;
     font-weight: 400;
@@ -674,7 +679,7 @@ footer {
     background-color: transparent; 
 }
 .modal-form-input:focus {
-    border-color: var(--iris);
+    border-color: #4D5AE5;
 }
 .modal-form-icon {
     position: absolute;
@@ -687,9 +692,12 @@ footer {
     transition-property: fill;
 }
 .modal-form-input:focus + .modal-form-icon {
-    fill: var(--iris);
+    fill: #4D5AE5;
 }
 
+.modal-form-comment-field {
+    margin-bottom: 16px;
+}
 
 .modal-form-comment {
     font-weight: 400;
@@ -715,7 +723,7 @@ footer {
 }
 
 .modal-form-comment:focus {
-    border-color: var(--iris);
+   border-color: #4D5AE5; 
 }
 
 .modal-form-agreement {
@@ -739,7 +747,7 @@ footer {
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
     transition: var(--anim-fast);
-    transition-property: background-color,  border;
+    transition-property: background-color,border,fill;
     fill: transparent; 
 }
 .modal-form-link {
@@ -750,7 +758,7 @@ footer {
 }
 
 input[type='checkbox']:checked + .modal-form-agreement-text  > .modal-form-checkbox {
-    background-color: var(--ocean);
+    background-color: #404bbf;
     border: none;
     fill: var(--cloud);
 }
