@@ -578,7 +578,7 @@ footer {
 }
 .backdrop.is-open {
     opacity: 1;
-    pointer-events: initial;
+    pointer-events: auto;
     visibility: visible;
 }
 
@@ -610,7 +610,7 @@ footer {
     padding: 0;
     width: 24px;
     height: 24px;
-    transition: background-color var(--anim-fast), border var(--anim-fast);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -712,7 +712,7 @@ footer {
     outline: transparent;
     resize: none;
     padding: 8px 16px;
-    transition: border-color var(--anim-fast);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -745,7 +745,7 @@ footer {
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
     fill: transparent; 
-    transition: background-color var(--anim-fast), border var(--anim-fast), fill var(--anim-fast);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-link {
     line-height: 133%;
