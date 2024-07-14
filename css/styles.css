@@ -610,7 +610,7 @@ footer {
     padding: 0;
     width: 24px;
     height: 24px;
-    transition: background-color var(--anim-fast) border var(--anim-fast);
+    transition: background-color var(--anim-fast), border var(--anim-fast);
 }
 
 
@@ -721,7 +721,7 @@ footer {
 }
 
 .modal-form-comment:focus {
-   border-color: #4D5AE5; 
+    border-color: #4D5AE5;
 }
 
 .modal-form-agreement {
@@ -744,8 +744,8 @@ footer {
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
-    transition: background-color var(--anim-fast), border var(--anim-fast), fill var(--anim-fast);
     fill: transparent; 
+    transition: background-color var(--anim-fast), border var(--anim-fast), fill var(--anim-fast);
 }
 .modal-form-link {
     line-height: 133%;
