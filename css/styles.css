@@ -500,8 +500,14 @@ footer {
 .footer-social .social-item-link:focus {
     background-color: var(--green);
 }
+
+.footer-subscribe-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 .form-subscribe {
-    margin-top: 16px;
     display: flex;
     gap:24px;
 }
@@ -511,10 +517,10 @@ footer {
     padding: 8px 16px;
     border: 1px solid var(--white);
     border-radius: 4px;
-    max-width: 264px;
+    width: 264px;
     height: 40px;
     border-radius: 4px;
-    background-color: var(--navy-blue);
+    background-color: transparent;
     color: var(--white);
     outline: transparent;
     transition: var(--anim-fast);
@@ -522,6 +528,7 @@ footer {
     font-size: 12px;
     line-height: 200%;
     letter-spacing: 0.04em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .email-input:focus {
@@ -534,11 +541,11 @@ footer {
 .btn-subscribe {
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     transition: var(--anim-fast);
     transition-property: background-color;
 }
@@ -549,6 +556,7 @@ footer {
 
 
 .subscribe-link-icon {
+    margin-left: 16px; 
     fill: var(--white)
 }
 /* #endregion */
@@ -560,11 +568,10 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(var(--navy-blue-rgb)/ 45%);
+    background-color: var(--navy-blue-modal);
     backdrop-filter: blur(2px);
     transition: var(--anim-fast);
     transition-property: opacity, visibility;
-
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -584,9 +591,11 @@ footer {
     background-color: rgb(var(--diary));
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    max-width: 408px;
-    min-height: 600px;
+    width: 408px;
+    min-height: 584px;
     padding: 72px 24px 24px;
+    transition: var(--anim-fast);
+    transition-property: transform;
 }
 .modal-btn-close {
     position: absolute;
@@ -598,9 +607,18 @@ footer {
     background-color: var(--cornflower);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    padding: 8px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
     transition: var(--anim-fast);
-    transition-property: background-color;
+    transition-property: background-color,border;
+}
+
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+    background-color: var(--ocean);
+    border: none;
 }
 
 .modal-close-icon {
@@ -609,14 +627,9 @@ footer {
     transition-property: fill;
 }
 
-.modal-btn-close:hover,
-.modal-btn-close:focus {
-    background-color: var(--ocean);
-}
-
 .modal-btn-close:hover .modal-close-icon,
 .modal-btn-close:focus .modal-close-icon {
-    fill: var(--white); 
+    fill: var(--white);
 }
 
 .modal-title {
@@ -658,6 +671,7 @@ footer {
     outline: transparent;
     transition: var(--anim-fast);
     transition-property: border-color;
+    background-color: transparent; 
 }
 .modal-form-input:focus {
     border-color: var(--iris);
@@ -681,8 +695,10 @@ footer {
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
-    margin-bottom: 16px;
     border: 1px solid var(--navy-blue-modal);
+    letter-spacing: 0.04em;
+    color: var(--navy-blue-modal);
+    background-color: transparent;
     border-radius: 4px;
     width: 100%;
     height: 120px;
@@ -690,8 +706,9 @@ footer {
     resize: none;
     padding: 8px 16px;
     transition: var(--anim-fast);
-    transition-property: fill;
+    transition-property:  border-color;
 }
+
 
 .modal-form-comment::placeholder {
     color: var(--navy-blue-modal);
@@ -702,7 +719,7 @@ footer {
 }
 
 .modal-form-agreement {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .modal-form-agreement-text {
@@ -721,6 +738,9 @@ footer {
     border-radius: 2px;
     border: 1px solid var(--navy-blue-modal);
     margin-right: 8px;
+    transition: var(--anim-fast);
+    transition-property: background-color,  border;
+    fill: transparent; 
 }
 .modal-form-link {
     line-height: 133%;
@@ -729,16 +749,12 @@ footer {
     color: var(--iris);
 }
 
-.modal-form-checkbox-icon {
-    fill: none;
-}
 input[type='checkbox']:checked + .modal-form-agreement-text  > .modal-form-checkbox {
-    background-color: var(--iris);
-}
-
-input[type='checkbox']:checked + .modal-form-agreement-text .modal-form-checkbox-icon {
+    background-color: var(--ocean);
+    border: none;
     fill: var(--cloud);
 }
+
 input[type='checkbox']:focus-visible + .modal-form-agreement-text  .modal-form-checkbox {
     box-shadow: 0 0 0 1px rgb(var(--navy-blue-rgb)/ 45%);
 }
