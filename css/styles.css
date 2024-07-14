@@ -615,7 +615,7 @@ footer {
 }
 
 .modal-btn-close:hover {
-    background-color: #404bbf;
+    background-color: var(--ocean);
     border: none;
 }
 .modal-btn-close:focus {
@@ -758,7 +758,7 @@ footer {
 }
 
 input[type='checkbox']:checked + .modal-form-agreement-text  > .modal-form-checkbox {
-    background-color: #404bbf;
+    background-color: var(--ocean);
     border: none;
     fill: var(--cloud);
 }
